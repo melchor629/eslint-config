@@ -3,10 +3,10 @@ name: CI
 on:
   # Runs when a push is done to dev
   push:
-    branches: [master]
+    branches: [main]
   # Runs when a PR is created to dev
   pull_request:
-    branches: [master]
+    branches: [main]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 

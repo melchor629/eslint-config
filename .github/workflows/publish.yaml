@@ -11,6 +11,7 @@ jobs:
     permissions:
       contents: read
       packages: write
+      id-token: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -18,6 +19,6 @@ jobs:
           node-version: 22
           registry-url: https://npm.pkg.github.com
       - run: npm ci
-      - run: npm publish --dist-tag $(echo '${{ github.ref_name }}' | awk '{ split($0,a,"-"); if (a[2] == "") { print "latest" } else { split(a[2],b,"."); print b[1] } }')
+      - run: npm publish --tag $(echo '${{ github.ref_name }}' | awk '{ split($0,a,"-"); if (a[2] == "") { print "latest" } else { split(a[2],b,"."); print b[1] } }') --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
