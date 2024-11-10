@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "lib": ["ESNext"],
+    "checkJs": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noEmit": true,
+    "emitDeclarationOnly": false,
+    "moduleResolution": "NodeNext",
+    "allowSyntheticDefaultImports": true
+  }
+}

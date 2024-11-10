@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - directory: /
+    package-ecosystem: github-actions
+    schedule:
+      interval: weekly
+      day: saturday
+      time: '10:00'
+  - directory: /
+    package-ecosystem: npm
+    schedule:
+      interval: weekly
+      day: saturday
+      time: '10:00'

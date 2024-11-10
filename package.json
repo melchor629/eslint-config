@@ -1,0 +1,56 @@
+{
+  "name": "@melchor629/eslint-config",
+  "version": "0.0.1",
+  "author": "melchor629",
+  "license": "MIT",
+  "description": "Personal eslint configuration for own projects.",
+  "homepage": "https://github.com/melchor629/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/melchor629/eslint-config/issues"
+  },
+  "funding": "https://ko-fi.com/melchor629",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melchor629/eslint-config.git"
+  },
+  "type": "module",
+  "exports": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "files": [
+    "./src/**",
+    "./LICENSE"
+  ],
+  "engines": {
+    "node": ">20.0.0"
+  },
+  "scripts": {
+    "check": "run-p check:*",
+    "check:eslint": "eslint",
+    "check:tsc": "tsc",
+    "check:knip": "knip",
+    "test": "run-p check:*"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-regexp": "^2.6.0",
+    "eslint-plugin-sort-destructure-keys": "^2.0.0",
+    "neostandard": "^0.11.0",
+    "typescript-eslint": "^8.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^9.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "knip": "^5.36.3",
+    "npm-run-all2": "^7.0.1",
+    "typescript": "^5.6.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
+  }
+}
