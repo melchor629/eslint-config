@@ -6,13 +6,7 @@ The goal of this project is to be used across all my projects, but anyone could 
 
 ## Install
 
-Ensure to have the scope `@melchor629` in `.npmrc`  pointing to `https://npm.pkg.github.com` like so:
-
-```ini
-@melchor629:registry=https://npm.pkg.github.com
-```
-
-Then just install:
+Just install:
 
 ```sh
 npm install -D eslint@^9 @melchor629/eslint-config
