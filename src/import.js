@@ -44,8 +44,8 @@ const generateImportRules = (env, moduleResolution, ts) => [
               js: 'always',
               mjs: 'always',
               jsx: 'always',
-              ts: 'always',
-              mts: 'always',
+              ts: 'never',
+              mts: 'never',
               tsx: 'always',
             }
           : (moduleResolution === 'bundler'
@@ -71,6 +71,9 @@ const generateImportRules = (env, moduleResolution, ts) => [
       'import/no-cycle': ['error', { maxDepth: '∞' }],
       'import/no-useless-path-segments': 'error',
       'import/no-import-module-exports': 'error',
+    },
+    settings: {
+      'import/resolver': ts ? { typescript: true } : undefined,
     },
   },
 ]
