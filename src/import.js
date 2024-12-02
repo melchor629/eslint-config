@@ -60,7 +60,9 @@ const generateImportRules = (env, moduleResolution, ts) => [
               : {}),
       ],
       'import/order': ['error', {
-        groups: [['builtin', 'external', 'internal', 'index', 'parent', 'sibling']],
+        alphabetize: { order: 'asc', orderImportKind: 'asc' },
+        groups: ['builtin', 'external', 'internal', ['index', 'parent', 'sibling']],
+        named: true,
       }],
       'import/newline-after-import': 'error',
       'import/prefer-default-export': 'error',
