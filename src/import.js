@@ -70,7 +70,7 @@ const generateImportRules = (env, moduleResolution, ts) => [
       'import/no-named-default': 'error',
       'import/no-self-import': 'error',
       // NOTE: this is slow, might be disabled some day...
-      'import/no-cycle': ['error', { maxDepth: '∞' }],
+      // 'import/no-cycle': ['error', { maxDepth: '∞' }],
       'import/no-useless-path-segments': 'error',
       'import/no-import-module-exports': 'error',
     },
