@@ -35,7 +35,6 @@ function melchor629({
     ...generateImportRules(
       neostandardOptions.env,
       moduleResolution ?? (neostandardOptions.env.includes('node') ? 'node-esm' : 'bundler'),
-      ts,
     ),
     ...(ts ? [generateTypescriptRules(!noJsx, dirname)] : []),
     ...(noJsx ? [] : generateReactRules()),
