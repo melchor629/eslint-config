@@ -1,15 +1,15 @@
-import importPlugin from 'eslint-plugin-import-x'
+// normal import fails, this does not...
+const { flatConfigs } = await import('eslint-plugin-import-x')
 
 /**
  * @param {import('neostandard').NeostandardOptions['env']} env Environment.
- * @param {string} moduleResolution Module Resolution.
  * @returns {import('eslint').Linter.Config[]}
  */
-const generateImportRules = (env, moduleResolution) => [
+const generateImportRules = (env) => [
   // https://github.com/un-ts/eslint-plugin-import-x#readme
   {
     name: 'import-x:recommended',
-    rules: importPlugin.flatConfigs.recommended.rules,
+    rules: flatConfigs.recommended.rules,
   },
   {
     name: 'melchor629:import',
@@ -36,29 +36,6 @@ const generateImportRules = (env, moduleResolution) => [
       'import-x/no-amd': 'error',
       'import-x/no-nodejs-modules': !env || env.includes('node') || env.includes('nodeBuiltin') ? 'off' : 'error',
       'import-x/imports-first': 'off',
-      'import-x/extensions': [
-        'error',
-        'ignorePackages',
-        moduleResolution === 'node-esm'
-          ? {
-              js: 'always',
-              mjs: 'always',
-              jsx: 'always',
-              ts: 'never',
-              mts: 'never',
-              tsx: 'always',
-            }
-          : (moduleResolution === 'bundler'
-              ? {
-                  js: 'never',
-                  mjs: 'never',
-                  jsx: 'never',
-                  ts: 'never',
-                  mts: 'never',
-                  tsx: 'never',
-                }
-              : {}),
-      ],
       'import-x/order': ['error', {
         alphabetize: { order: 'asc', orderImportKind: 'asc' },
         groups: ['builtin', 'external', 'internal', 'parent', 'index', 'sibling'],
@@ -66,8 +43,6 @@ const generateImportRules = (env, moduleResolution) => [
       'import-x/newline-after-import': 'error',
       'import-x/prefer-default-export': 'error',
       'import-x/no-self-import': 'error',
-      // NOTE: this is slow, might be disabled some day...
-      // 'import-x/no-cycle': ['error', { maxDepth: '∞' }],
       'import-x/no-useless-path-segments': 'error',
       'import-x/no-import-module-exports': 'error',
     },

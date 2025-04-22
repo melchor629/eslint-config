@@ -3,5 +3,5 @@
   "eslint": {
     "config": ["eslint.config.js", "src/index.js"]
   },
-  "ignoreDependencies": ["eslint-import-resolver-typescript"]
+  "ignoreDependencies": []
 }

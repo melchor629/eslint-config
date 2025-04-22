@@ -11,7 +11,6 @@ import generateTypescriptRules from './ts.js'
 function melchor629({
   dirname,
   ignores: providedIgnores,
-  moduleResolution,
   noJsx,
   semi = false,
   ts = false,
@@ -32,10 +31,7 @@ function melchor629({
       ...neostandardOptions,
     }),
     ...generateBaseRules(),
-    ...generateImportRules(
-      neostandardOptions.env,
-      moduleResolution ?? (neostandardOptions.env.includes('node') ? 'node-esm' : 'bundler'),
-    ),
+    ...generateImportRules(neostandardOptions.env),
     ...(ts ? [generateTypescriptRules(!noJsx, dirname)] : []),
     ...(noJsx ? [] : generateReactRules()),
     ...regexpRules,
