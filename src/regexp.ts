@@ -1,7 +1,7 @@
+import type { Linter } from 'eslint'
 import { configs } from 'eslint-plugin-regexp'
 
-/** @type {import('eslint').Linter.Config[]} */
-const regexpRules = [
+const regexpRules: Linter.Config[] = [
   configs['flat/recommended'],
 ]
 

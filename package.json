@@ -14,14 +14,14 @@
     "url": "git+https://github.com/melchor629/eslint-config.git"
   },
   "type": "module",
-  "exports": "./src/index.js",
-  "types": "./src/index.d.ts",
+  "exports": "./src/index.ts",
+  "types": "./src/index.ts",
   "files": [
     "./src/**",
     "./LICENSE"
   ],
   "engines": {
-    "node": ">20.0.0"
+    "node": ">=22.18.0 || >=24"
   },
   "scripts": {
     "check": "run-p check:*",

@@ -9,6 +9,9 @@
     "emitDeclarationOnly": false,
     "moduleResolution": "NodeNext",
     "allowSyntheticDefaultImports": true,
+    "erasableSyntaxOnly": true,
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
     "skipLibCheck": true
   }
 }

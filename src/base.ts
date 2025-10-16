@@ -1,10 +1,11 @@
+import type { Linter } from 'eslint'
 import eslintBase from '@eslint/js'
 import sortDestructureKeysPlugin from 'eslint-plugin-sort-destructure-keys'
 
 /**
- * @returns {import('eslint').Linter.Config[]}
+ * @returns base rules
  */
-const generateBaseRules = () => [
+const generateBaseRules = (): Linter.Config[] => [
   // https://eslint.org/docs/latest/rules/
   eslintBase.configs.recommended,
   {

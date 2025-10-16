@@ -1,12 +1,12 @@
-// eslint-disable-next-line import-x/no-unresolved
+import type { Linter } from 'eslint'
 import tseslint from 'typescript-eslint'
 
 /**
- * @param {boolean} jsx Has JSX support.
- * @param {string | undefined} dirname Root directory of the project.
- * @returns {import('eslint').Linter.Config}
+ * @param jsx Has JSX support.
+ * @param dirname Root directory of the project.
+ * @returns TS rules
  */
-const generateTypescriptRules = (jsx, dirname) => ({
+const generateTypescriptRules = (jsx: boolean, dirname?: string): Linter.Config => ({
   name: 'melchor629:ts',
   files: ['**/*.ts', ...(jsx ? ['**/*.tsx'] : [])],
   languageOptions: dirname

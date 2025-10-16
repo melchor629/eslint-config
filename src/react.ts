@@ -1,18 +1,14 @@
+import type { Linter } from 'eslint'
 import reactA11yPlugin from 'eslint-plugin-jsx-a11y'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 
 /**
- * @returns {import('eslint').Linter.Config[]}
+ * @returns react rules
  */
-const generateReactRules = () => [
+const generateReactRules = (): Linter.Config[] => [
   // https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks
-  {
-    name: 'react-hooks',
-    ...reactHooksPlugin.configs.recommended,
-    plugins: {
-      'react-hooks': { rules: reactHooksPlugin.rules },
-    },
-  },
+  // @ts-expect-error adds .default when not needed
+  reactHooksPlugin.configs.flat.recommended,
   // https://github.com/jsx-eslint/eslint-plugin-react
   {
     name: 'melchor629:react',

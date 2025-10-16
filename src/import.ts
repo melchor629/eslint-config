@@ -1,11 +1,13 @@
+import type { Linter } from 'eslint'
+import type { NeostandardOptions } from 'neostandard'
 // normal import fails, this does not...
 const { flatConfigs } = await import('eslint-plugin-import-x')
 
 /**
- * @param {import('neostandard').NeostandardOptions['env']} env Environment.
- * @returns {import('eslint').Linter.Config[]}
+ * @param env Environment.
+ * @returns import rules
  */
-const generateImportRules = (env) => [
+const generateImportRules = (env: NeostandardOptions['env']): Linter.Config[] => [
   // https://github.com/un-ts/eslint-plugin-import-x#readme
   {
     name: 'import-x:recommended',
