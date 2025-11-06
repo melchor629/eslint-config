@@ -14,10 +14,11 @@
     "url": "git+https://github.com/melchor629/eslint-config.git"
   },
   "type": "module",
-  "exports": "./src/index.ts",
+  "exports": "./dist/config.js",
   "types": "./src/index.ts",
   "files": [
     "./src/**",
+    "./dist/**",
     "./LICENSE"
   ],
   "engines": {
@@ -28,6 +29,7 @@
     "check:eslint": "eslint",
     "check:tsc": "tsc",
     "check:knip": "knip",
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node22 --format=esm --packages=external --outfile=./dist/config.js",
     "test": "run-p check:*"
   },
   "dependencies": {
@@ -44,6 +46,7 @@
     "eslint": "^9.0.0"
   },
   "devDependencies": {
+    "esbuild": "^0.25.0",
     "eslint": "^9.0.0",
     "knip": "^5.36.3",
     "npm-run-all2": "^8.0.1",
