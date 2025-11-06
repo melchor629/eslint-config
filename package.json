@@ -30,6 +30,7 @@
     "check:tsc": "tsc",
     "check:knip": "knip",
     "build": "esbuild src/index.ts --bundle --platform=node --target=node22 --format=esm --packages=external --outfile=./dist/config.js",
+    "prepublish": "npm run build",
     "test": "run-p check:*"
   },
   "dependencies": {
