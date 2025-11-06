@@ -1,6 +1,6 @@
 {
   "name": "@melchor629/eslint-config",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": "melchor629",
   "license": "MIT",
   "description": "Personal eslint configuration for own projects.",
