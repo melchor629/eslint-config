@@ -14,8 +14,10 @@
     "url": "git+https://github.com/melchor629/eslint-config.git"
   },
   "type": "module",
-  "exports": "./dist/config.js",
-  "types": "./src/index.ts",
+  "exports": {
+    "import": "./dist/config.js",
+    "types": "./src/index.ts"
+  },
   "files": [
     "./src/**",
     "./dist/**",
