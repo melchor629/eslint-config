@@ -1,7 +1,7 @@
 import type { Linter } from 'eslint'
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript'
+import { default as importX, flatConfigs } from 'eslint-plugin-import-x'
 import type { NeostandardOptions } from 'neostandard'
-// normal import fails, this does not...
-const { flatConfigs } = await import('eslint-plugin-import-x')
 
 /**
  * @param env Environment.
@@ -12,6 +12,9 @@ const generateImportRules = (env: NeostandardOptions['env']): Linter.Config[] =>
   {
     name: 'import-x:recommended',
     rules: flatConfigs.recommended.rules,
+    plugins: {
+      'import-x': importX,
+    },
   },
   {
     name: 'melchor629:import',
@@ -47,6 +50,11 @@ const generateImportRules = (env: NeostandardOptions['env']): Linter.Config[] =>
       'import-x/no-self-import': 'error',
       'import-x/no-useless-path-segments': 'error',
       'import-x/no-import-module-exports': 'error',
+    },
+    settings: {
+      'import-x/resolver-next': createTypeScriptImportResolver({
+        project: './tsconfig.json',
+      }),
     },
   },
 ]
