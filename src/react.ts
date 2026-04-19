@@ -7,7 +7,6 @@ import reactHooksPlugin from 'eslint-plugin-react-hooks'
  */
 const generateReactRules = (): Linter.Config[] => [
   // https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks
-  // @ts-expect-error adds .default when not needed
   reactHooksPlugin.configs.flat.recommended,
   // https://github.com/jsx-eslint/eslint-plugin-react
   {

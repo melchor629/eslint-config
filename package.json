@@ -50,9 +50,10 @@
     "eslint": "^9.0.0"
   },
   "devDependencies": {
-    "esbuild": "^0.27.0",
+    "@types/eslint-plugin-jsx-a11y": "^6.10.1",
+    "esbuild": "^0.28.0",
     "eslint": "^9.0.0",
-    "knip": "^5.36.3",
+    "knip": "^6.0.0",
     "npm-run-all2": "^8.0.1",
     "typescript": "^6.0.0"
   },
