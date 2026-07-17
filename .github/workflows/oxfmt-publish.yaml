@@ -1,9 +1,9 @@
-name: Node.js Package
+name: oxfmt Package
 
 on:
   # Publish npm package when this tag is created
   push:
-    tags: ['v*.*.*', 'v*.*.*-*']
+    tags: ['oxfmt@*.*.*', 'oxfmt@*.*.*-*']
 
 permissions:
   # Required for npm OIDC
@@ -23,4 +23,4 @@ jobs:
           node-version: 24
           registry-url: https://registry.npmjs.org
       - run: npm ci
-      - run: npm publish --tag $(echo '${{ github.ref_name }}' | awk '{ split($0,a,"-"); if (a[2] == "") { print "latest" } else { split(a[2],b,"."); print b[1] } }') --provenance
+      - run: npm publish -w packages/oxfmt --tag $(echo '${{ github.ref_name }}' | awk '{ split($0,a,"-"); if (a[2] == "") { print "latest" } else { split(a[2],b,"."); print b[1] } }') --provenance

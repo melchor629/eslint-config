@@ -1,7 +1,7 @@
 {
   "$schema": "https://unpkg.com/knip@2/schema.json",
   "eslint": {
-    "config": ["eslint.config.js", "src/index.js"]
+    "config": ["eslint.config.js", "packages/eslint/src/index.js"],
   },
-  "ignoreDependencies": []
+  "ignoreDependencies": [],
 }

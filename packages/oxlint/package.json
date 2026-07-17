@@ -1,0 +1,49 @@
+{
+  "name": "@melchor629/oxlint-config",
+  "version": "0.1.0-beta.1",
+  "description": "Personal oxlint configuration for own projects.",
+  "homepage": "https://github.com/melchor629/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/melchor629/eslint-config/issues"
+  },
+  "license": "MIT",
+  "author": "melchor629",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melchor629/eslint-config.git"
+  },
+  "funding": "https://ko-fi.com/melchor629",
+  "files": [
+    "./dist/**",
+    "../../LICENSE"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.mts"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsdown"
+  },
+  "dependencies": {
+    "eslint-plugin-regexp": "^3.0.0",
+    "eslint-plugin-sort-destructure-keys": "^3.0.0"
+  },
+  "peerDependencies": {
+    "oxlint": "^1.74.0",
+    "oxlint-tsgolint": ">=0.25.0 && < 1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "oxlint-tsgolint": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=22.18.0 || >=24"
+  }
+}

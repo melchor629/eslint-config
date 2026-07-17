@@ -1,0 +1,26 @@
+name: oxlint Package
+
+on:
+  # Publish npm package when this tag is created
+  push:
+    tags: ['oxlint@*.*.*', 'oxlint@*.*.*-*']
+
+permissions:
+  # Required for npm OIDC
+  id-token: write
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+      - run: npm ci
+      - run: npm publish -w packages/oxlint --tag $(echo '${{ github.ref_name }}' | awk '{ split($0,a,"-"); if (a[2] == "") { print "latest" } else { split(a[2],b,"."); print b[1] } }') --provenance

@@ -25,16 +25,19 @@ const generateTypescriptRules = (jsx: boolean, dirname?: string): Linter.Config 
     ...(dirname ? tseslint.configs.recommendedTypeChecked : tseslint.configs.recommended)
       .map(({ rules }) => rules)
       .filter((rules) => rules != null)
-      .reduce((allRules, rules) => ({ ...allRules, ...rules }), {}),
+      .reduce((allRules, rules) => Object.assign(allRules, rules), {}),
     // warn about deprecated APIs
     '@typescript-eslint/no-deprecated': 'warn',
     // unused vars except _asd
-    '@typescript-eslint/no-unused-vars': ['error', {
-      vars: 'all',
-      args: 'all',
-      argsIgnorePattern: '^_',
-      ignoreRestSiblings: true,
-    }],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        args: 'all',
+        argsIgnorePattern: '^_',
+        ignoreRestSiblings: true,
+      },
+    ],
   },
 })
 

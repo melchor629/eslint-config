@@ -1,0 +1,40 @@
+{
+  "name": "@melchor629/oxfmt-config",
+  "version": "0.1.0-beta.1",
+  "description": "Personal oxfmt configuration for own projects.",
+  "homepage": "https://github.com/melchor629/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/melchor629/eslint-config/issues"
+  },
+  "license": "MIT",
+  "author": "melchor629",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melchor629/eslint-config.git"
+  },
+  "funding": "https://ko-fi.com/melchor629",
+  "files": [
+    "./dist/**",
+    "../../LICENSE"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.mts"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsdown"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "oxfmt": ">=0.49 && < 1.0.0"
+  },
+  "engines": {
+    "node": ">=22.18.0 || >=24"
+  }
+}

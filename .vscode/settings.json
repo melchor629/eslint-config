@@ -1,4 +1,6 @@
 {
-    "eslint.useFlatConfig": true,
-    "eslint.format.enable": true
+  "eslint.useFlatConfig": true,
+  "eslint.format.enable": true,
+  "oxc.enable.oxfmt": true,
+  "oxc.enable.oxlint": true
 }

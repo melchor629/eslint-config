@@ -2,7 +2,6 @@
   "compilerOptions": {
     "module": "NodeNext",
     "lib": ["ESNext"],
-    "checkJs": true,
     "declaration": true,
     "declarationMap": true,
     "noEmit": true,
@@ -12,7 +11,13 @@
     "erasableSyntaxOnly": true,
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
+    "isolatedDeclarations": true,
     "skipLibCheck": true
   },
-  "exclude": ["node_modules", "dist"]
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
+    }
+  ],
+  "exclude": ["node_modules", "dist", "**/*.config.ts"]
 }

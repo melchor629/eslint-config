@@ -3,7 +3,7 @@ import reactA11yPlugin from 'eslint-plugin-jsx-a11y'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 
 /**
- * @returns react rules
+ * @returns React rules
  */
 const generateReactRules = (): Linter.Config[] => [
   // https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks
@@ -32,15 +32,21 @@ const generateReactRules = (): Linter.Config[] => [
           unnamedComponents: ['arrow-function'],
         },
       ],
-      'react/prop-types': ['error', {
-        ignore: [],
-        customValidators: [],
-        skipUndeclared: false,
-      }],
-      'react/no-unused-prop-types': ['error', {
-        customValidators: [],
-        skipShapeProps: true,
-      }],
+      'react/prop-types': [
+        'error',
+        {
+          ignore: [],
+          customValidators: [],
+          skipUndeclared: false,
+        },
+      ],
+      'react/no-unused-prop-types': [
+        'error',
+        {
+          customValidators: [],
+          skipShapeProps: true,
+        },
+      ],
       'react/no-array-index-key': 'error',
       'react/prefer-read-only-props': 'error',
       'react/jsx-no-useless-fragment': 'error',
@@ -51,10 +57,13 @@ const generateReactRules = (): Linter.Config[] => [
 
       // style changes from neostandard
       '@stylistic/jsx-quotes': ['error', 'prefer-double'],
-      '@stylistic/jsx-max-props-per-line': ['error', {
-        maximum: 1,
-        when: 'multiline',
-      }],
+      '@stylistic/jsx-max-props-per-line': [
+        'error',
+        {
+          maximum: 1,
+          when: 'multiline',
+        },
+      ],
 
       // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y
       // accessibility rules

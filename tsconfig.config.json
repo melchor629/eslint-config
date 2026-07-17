@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "isolatedDeclarations": false
+  },
+  "include": ["**/*.config.ts"]
+}

@@ -1,0 +1,1 @@
+../../tsdown.config.ts

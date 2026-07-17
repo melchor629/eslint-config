@@ -1,63 +1,28 @@
 {
-  "name": "@melchor629/eslint-config",
-  "version": "0.4.0",
-  "author": "melchor629",
-  "license": "MIT",
-  "description": "Personal eslint configuration for own projects.",
-  "homepage": "https://github.com/melchor629/eslint-config#readme",
-  "bugs": {
-    "url": "https://github.com/melchor629/eslint-config/issues"
-  },
-  "funding": "https://ko-fi.com/melchor629",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/melchor629/eslint-config.git"
-  },
-  "type": "module",
-  "exports": {
-    "import": "./dist/config.js",
-    "types": "./src/index.ts"
-  },
-  "files": [
-    "./src/**",
-    "./dist/**",
-    "./LICENSE"
+  "private": true,
+  "workspaces": [
+    "packages/*"
   ],
-  "engines": {
-    "node": ">=22.18.0 || >=24"
-  },
+  "type": "module",
   "scripts": {
     "check": "run-p check:*",
+    "check:lint": "oxlint .",
     "check:eslint": "eslint",
     "check:tsc": "tsc",
+    "check:fmt": "oxfmt --check .",
     "check:knip": "knip",
-    "build": "esbuild src/index.ts --bundle --platform=node --target=node22 --format=esm --packages=external --outfile=./dist/config.js",
+    "build": "npm run build --workspaces",
     "prepublish": "npm run build",
     "test": "run-p check:*"
   },
-  "dependencies": {
-    "@eslint/js": "^9.0.0",
-    "eslint-import-resolver-typescript": "^4.4.4",
-    "eslint-plugin-import-x": "^4.6.1",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-react-hooks": "^7.0.0",
-    "eslint-plugin-regexp": "^3.0.0",
-    "eslint-plugin-sort-destructure-keys": "^3.0.0",
-    "neostandard": "^0.13.0",
-    "typescript-eslint": "^8.0.0"
-  },
-  "peerDependencies": {
-    "eslint": "^9.0.0"
-  },
   "devDependencies": {
-    "@types/eslint-plugin-jsx-a11y": "^6.10.1",
-    "esbuild": "^0.28.0",
     "eslint": "^9.0.0",
     "knip": "^6.0.0",
     "npm-run-all2": "^8.0.1",
+    "oxfmt": "^0.59.0",
+    "oxlint": "^1.74.0",
+    "oxlint-tsgolint": "0.25.0",
+    "tsdown": "^0.22.9",
     "typescript": "^6.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

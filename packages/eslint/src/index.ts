@@ -6,16 +6,19 @@ import generateReactRules from './react.ts'
 import regexpRules from './regexp.ts'
 import generateTypescriptRules from './ts.ts'
 
-export type Melchor629Options = Readonly<NeostandardOptions & {
-  /**
-   * The value of `import.meta.dirname`. It is required for an
-   * improved ruleset of the strict checks.
-   */
-  dirname?: string
-}>
+export type Melchor629Options = Readonly<
+  NeostandardOptions & {
+    /**
+     * The value of `import.meta.dirname`. It is required for an improved ruleset of the strict
+     * checks.
+     */
+    dirname?: string
+  }
+>
 
 /**
  * Provides the personal configuration and rules.
+ *
  * @param param0 Config options
  */
 function melchor629({
@@ -26,11 +29,7 @@ function melchor629({
   ts = false,
   ...neostandardOptions
 }: Melchor629Options = {}): ReadonlyArray<Linter.Config> {
-  const ignores = [
-    'coverage/**/*',
-    ...resolveIgnoresFromGitignore(),
-    ...providedIgnores ?? [],
-  ]
+  const ignores = ['coverage/**/*', ...resolveIgnoresFromGitignore(), ...(providedIgnores ?? [])]
 
   return Object.freeze([
     { ignores },
