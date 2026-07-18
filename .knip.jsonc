@@ -3,5 +3,6 @@
   "eslint": {
     "config": ["eslint.config.js", "packages/eslint/src/index.js"],
   },
+  "ignore": ["oxlint.config.ts"],
   "ignoreDependencies": [],
 }

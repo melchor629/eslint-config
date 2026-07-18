@@ -16,6 +16,7 @@
     "test": "run-p check:*"
   },
   "devDependencies": {
+    "@types/node": "^24",
     "eslint": "^9.0.0",
     "knip": "^6.0.0",
     "npm-run-all2": "^8.0.1",

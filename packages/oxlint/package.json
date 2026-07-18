@@ -1,6 +1,6 @@
 {
   "name": "@melchor629/oxlint-config",
-  "version": "0.1.0-beta.1",
+  "version": "0.1.0-beta.2",
   "description": "Personal oxlint configuration for own projects.",
   "homepage": "https://github.com/melchor629/eslint-config#readme",
   "bugs": {

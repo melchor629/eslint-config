@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "composite": true,
-    "isolatedDeclarations": false
+    "lib": ["ESNext"],
+    "isolatedDeclarations": false,
+    "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": true,
+    "types": ["node"]
   },
   "include": ["**/*.config.ts"]
 }

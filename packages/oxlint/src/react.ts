@@ -13,6 +13,9 @@ const generateReactRules = (): OxlintConfig => ({
     },
   },
   rules: {
+    // disable rules not needed for react 18 or higher
+    'react/react-in-jsx-scope': 'off',
+
     // rules from pedantic, style or restriction
     'react/jsx-boolean-value': 'error',
     'react/jsx-fragments': ['error', 'syntax'],

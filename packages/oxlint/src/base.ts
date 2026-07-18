@@ -3,7 +3,7 @@ import type { OxlintConfig } from 'oxlint'
 
 const generateBaseRules = (): OxlintConfig => ({
   jsPlugins: [sortDestructureKeysPlugin.meta!.name!],
-  plugins: ['unicorn'],
+  plugins: ['unicorn', 'typescript', 'eslint', 'oxc', 'promise'],
   categories: {
     correctness: 'error',
     suspicious: 'warn',
@@ -12,7 +12,6 @@ const generateBaseRules = (): OxlintConfig => ({
   },
   env: {
     builtin: true,
-    es2024: true,
   },
   rules: {
     // override default rule from correctness
