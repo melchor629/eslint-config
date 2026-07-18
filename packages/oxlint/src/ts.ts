@@ -13,6 +13,7 @@ const generateTypescriptRules = (): OxlintConfig => ({
         'prefer-promise-reject-errors': 'off',
         'require-await': 'off',
         'typescript/no-unsafe-type-assertion': 'off',
+        'typescript/consistent-return': 'off',
         // --- rules from pedantic or restriction
         'typescript/ban-ts-comment': 'error',
         'typescript/no-empty-interface': 'error',

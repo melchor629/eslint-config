@@ -2,7 +2,7 @@ import sortDestructureKeysPlugin from 'eslint-plugin-sort-destructure-keys'
 import type { OxlintConfig } from 'oxlint'
 
 const generateBaseRules = (): OxlintConfig => ({
-  jsPlugins: [sortDestructureKeysPlugin.meta!.name!],
+  jsPlugins: [import.meta.resolve(sortDestructureKeysPlugin.meta.name)],
   plugins: ['unicorn', 'typescript', 'eslint', 'oxc', 'promise'],
   categories: {
     correctness: 'error',
@@ -26,7 +26,12 @@ const generateBaseRules = (): OxlintConfig => ({
     ],
     'no-shadow': 'off',
     'no-underscore-dangle': 'off',
+    'no-await-in-loop': 'off',
     'unicorn/require-module-specifiers': 'off',
+    'unicorn/require-post-message-target-origin': 'off',
+    'promise/always-return': ['warn', {
+      ignoreLastCallback: true,
+    }],
 
     // pedantic, restriction or style rules
     'no-array-constructor': 'error',

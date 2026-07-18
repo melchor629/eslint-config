@@ -15,6 +15,7 @@ const generateReactRules = (): OxlintConfig => ({
   rules: {
     // disable rules not needed for react 18 or higher
     'react/react-in-jsx-scope': 'off',
+    'react/no-object-type-as-default-prop': 'off',
 
     // rules from pedantic, style or restriction
     'react/jsx-boolean-value': 'error',
@@ -27,7 +28,7 @@ const generateReactRules = (): OxlintConfig => ({
         enforceDynamicLinks: 'always',
       },
     ],
-    'react/no-unescaped-entities': 'error',
+    'react/no-unescaped-entities': 'allow',
     'react/require-render-return': 'error',
     'react/self-closing-comp': 'error',
     'react/jsx-props-no-spreading': [
