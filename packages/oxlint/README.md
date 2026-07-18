@@ -48,7 +48,7 @@ export default melchor629({
   additional: [
     {
       // put here overwrites and all stuff
-    }
+    },
   ],
 })
 ```

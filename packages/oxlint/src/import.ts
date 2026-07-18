@@ -20,6 +20,10 @@ const generateImportRules = (env: OxlintEnv): OxlintConfig => ({
     'import/prefer-default-export': 'error',
     'import/no-self-import': 'error',
 
+    // disable sus rules
+    'import/no-unassigned-import': 'off',
+    'import/no-empty-named-blocks': 'off',
+
     // not implemented
     // 'import-x/no-unresolved': ['error', { caseSensitive: true }],
     // 'import-x/no-useless-path-segments': 'error',

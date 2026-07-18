@@ -58,15 +58,17 @@ const melchor629Oxlint = ({
   jsx = false,
   ts = true,
 }: Melchor629OxlintOptions): OxlintConfig =>
-  deepMerge<OxlintConfig>(
-    {},
-    generateBaseRules(),
-    generateImportRules(env),
-    ts ? generateTypescriptRules() : {},
-    jsx ? generateReactRules() : {},
-    regexpRules,
-    ...additional,
-    defineConfig({ env }),
+  Object.freeze(
+    deepMerge<OxlintConfig>(
+      {},
+      generateBaseRules(),
+      generateImportRules(env),
+      ts ? generateTypescriptRules() : {},
+      jsx ? generateReactRules() : {},
+      regexpRules,
+      ...additional,
+      defineConfig({ env }),
+    ),
   )
 
 export default melchor629Oxlint

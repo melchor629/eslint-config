@@ -24,6 +24,9 @@ const generateBaseRules = (): OxlintConfig => ({
         ignoreRestSiblings: true,
       },
     ],
+    'no-shadow': 'off',
+    'no-underscore-dangle': 'off',
+    'unicorn/require-module-specifiers': 'off',
 
     // pedantic, restriction or style rules
     'no-array-constructor': 'error',
@@ -40,7 +43,6 @@ const generateBaseRules = (): OxlintConfig => ({
     'prefer-const': 'error',
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
-    'unicorn/no-useless-undefined': 'error',
 
     // external plugin
     'sort-destructure-keys/sort-destructure-keys': 'error',
