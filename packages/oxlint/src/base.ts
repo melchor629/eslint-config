@@ -29,9 +29,12 @@ const generateBaseRules = (): OxlintConfig => ({
     'no-await-in-loop': 'off',
     'unicorn/require-module-specifiers': 'off',
     'unicorn/require-post-message-target-origin': 'off',
-    'promise/always-return': ['warn', {
-      ignoreLastCallback: true,
-    }],
+    'promise/always-return': [
+      'warn',
+      {
+        ignoreLastCallback: true,
+      },
+    ],
 
     // pedantic, restriction or style rules
     'no-array-constructor': 'error',
