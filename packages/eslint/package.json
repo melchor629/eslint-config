@@ -2,7 +2,7 @@
   "name": "@melchor629/eslint-config",
   "version": "0.4.1",
   "description": "Personal eslint configuration for own projects.",
-  "homepage": "https://github.com/melchor629/eslint-config#readme",
+  "homepage": "https://github.com/melchor629/eslint-config/tree/main/packages/eslint#readme",
   "bugs": {
     "url": "https://github.com/melchor629/eslint-config/issues"
   },
@@ -15,7 +15,7 @@
   "funding": "https://ko-fi.com/melchor629",
   "files": [
     "./dist/**",
-    "../../LICENSE"
+    "README.md"
   ],
   "type": "module",
   "exports": {

@@ -1,8 +1,8 @@
 {
   "name": "@melchor629/oxfmt-config",
-  "version": "0.1.0-beta.2",
+  "version": "0.1.0-beta.3",
   "description": "Personal oxfmt configuration for own projects.",
-  "homepage": "https://github.com/melchor629/eslint-config#readme",
+  "homepage": "https://github.com/melchor629/eslint-config/tree/main/packages/oxfmt#readme",
   "bugs": {
     "url": "https://github.com/melchor629/eslint-config/issues"
   },
@@ -15,7 +15,7 @@
   "funding": "https://ko-fi.com/melchor629",
   "files": [
     "./dist/**",
-    "../../LICENSE"
+    "README.md"
   ],
   "type": "module",
   "exports": {
