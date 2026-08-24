@@ -13,6 +13,8 @@ function check_and_tag() {
   fi
 }
 
+git push
+
 check_and_tag "eslint"
 check_and_tag "oxfmt"
 check_and_tag "oxlint"
