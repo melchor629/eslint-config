@@ -1,6 +1,6 @@
 {
   "name": "@melchor629/eslint-config",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Personal eslint configuration for own projects.",
   "homepage": "https://github.com/melchor629/eslint-config/tree/main/packages/eslint#readme",
   "bugs": {
