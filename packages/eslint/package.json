@@ -29,21 +29,18 @@
     "build": "tsdown"
   },
   "dependencies": {
-    "@eslint/js": "^9.0.0",
-    "eslint-import-resolver-typescript": "^4.4.4",
-    "eslint-plugin-import-x": "^4.6.1",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "@eslint/js": "^10.0.0",
+    "eslint-import-resolver-typescript": "^4.4.5",
+    "eslint-plugin-import-x": "^4.17.1",
     "eslint-plugin-react-hooks": "^7.0.0",
-    "eslint-plugin-regexp": "^3.0.0",
+    "eslint-plugin-regexp": "^3.3.1",
     "eslint-plugin-sort-destructure-keys": "^3.0.0",
-    "neostandard": "^0.13.0",
+    "neostandard": "^0.14.0",
     "typescript-eslint": "^8.0.0"
   },
-  "devDependencies": {
-    "@types/eslint-plugin-jsx-a11y": "^6.10.1"
-  },
+  "devDependencies": {},
   "peerDependencies": {
-    "eslint": "^9.0.0"
+    "eslint": "^10.0.0"
   },
   "engines": {
     "node": ">=22.18.0 || >=24"

@@ -1,5 +1,5 @@
 import type { Linter } from 'eslint'
-import neostandard, { resolveIgnoresFromGitignore, type NeostandardOptions } from 'neostandard'
+import { neostandard, resolveIgnoresFromGitignore, type NeostandardOptions } from 'neostandard'
 import generateBaseRules from './base.ts'
 import generateImportRules from './import.ts'
 import generateReactRules from './react.ts'

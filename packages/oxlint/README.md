@@ -18,8 +18,8 @@ npm install -D oxlint-tsgolint # if expected to enable ts rules
 Add an `oxlint.config.js` in your project and configure:
 
 ```js
-import { defineConfig } from 'oxlint'
 import melchor629 from '@melchor629/oxlint-config'
+import { defineConfig } from 'oxlint'
 
 export default melchor629()
 ```
@@ -27,8 +27,8 @@ export default melchor629()
 If your project has TypeScript, it is recommended to enable the rules:
 
 ```js
-import { defineConfig } from 'oxlint'
 import melchor629 from '@melchor629/oxlint-config'
+import { defineConfig } from 'oxlint'
 
 export default melchor629({
   // enables ts support
@@ -41,8 +41,8 @@ It is also recommended to select the `env` setting according to your needs if en
 You can also provide your own rules or custom extensions:
 
 ```js
-import { defineConfig } from 'oxlint'
 import melchor629 from '@melchor629/oxlint-config'
+import { defineConfig } from 'oxlint'
 
 export default melchor629({
   additional: [

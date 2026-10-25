@@ -1,5 +1,4 @@
 import type { Linter } from 'eslint'
-import reactA11yPlugin from 'eslint-plugin-jsx-a11y'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 
 /**
@@ -13,7 +12,7 @@ const generateReactRules = (): Linter.Config[] => [
     name: 'melchor629:react',
     ignores: ['**/*.js', '**/*.mjs', '**/*.cjs', '**/*.ts'],
     plugins: {
-      'jsx-a11y': reactA11yPlugin,
+      // 'jsx-a11y': reactA11yPlugin as NonNullable<Linter.Config['plugins']>['a'],
     },
     rules: {
       // new non-style rules from neostandard from airbnb
@@ -67,7 +66,7 @@ const generateReactRules = (): Linter.Config[] => [
 
       // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y
       // accessibility rules
-      ...reactA11yPlugin.flatConfigs.recommended.rules,
+      // ...reactA11yPlugin.flatConfigs.recommended.rules,
     },
     settings: {
       'jsx-a11y': {

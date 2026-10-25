@@ -17,8 +17,8 @@ npm install -D oxfmt @melchor629/oxfmt-config
 Add an `oxfmt.config.js` in your project and configure:
 
 ```js
-import { defineConfig } from 'oxfmt'
 import melchor629 from '@melchor629/oxfmt-config'
+import { defineConfig } from 'oxfmt'
 
 export default melchor629()
 ```
