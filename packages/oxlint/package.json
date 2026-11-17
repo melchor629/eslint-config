@@ -36,10 +36,14 @@
   },
   "peerDependencies": {
     "oxlint": "^1.74.0",
-    "oxlint-tsgolint": ">=0.25.0 && < 8.0.0"
+    "oxlint-tsgolint": ">=0.25.0 && < 8.0.0",
+    "tsrs": ">=0.25.0- && <1.0.0"
   },
   "peerDependenciesMeta": {
     "oxlint-tsgolint": {
+      "optional": true
+    },
+    "tsrs": {
       "optional": true
     }
   },

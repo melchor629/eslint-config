@@ -4,7 +4,7 @@ set -euo pipefail
 
 function check_and_tag() {
   VERSION=$(node -p "require('./packages/$1/package.json').version")
-  if git tag | grep "$1@$VERSION" >/dev/null; then
+  if git tag | grep "^$1@$VERSION$" >/dev/null; then
     echo "$1@$VERSION already exists"
   else
     echo "Tagging $1@$VERSION"
