@@ -11,6 +11,7 @@ Just install:
 ```sh
 npm install -D oxlint @melchor629/oxlint-config
 npm install -D oxlint-tsgolint # if expected to enable ts rules
+npm install -D tsrs # alternative to above dependency
 ```
 
 ## Usage
@@ -45,10 +46,8 @@ import melchor629 from '@melchor629/oxlint-config'
 import { defineConfig } from 'oxlint'
 
 export default melchor629({
-  additional: [
-    {
-      // put here overwrites and all stuff
-    },
-  ],
+  additional: {
+    // put here overwrites and all stuff
+  },
 })
 ```

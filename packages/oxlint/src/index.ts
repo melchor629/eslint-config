@@ -54,11 +54,11 @@ const deepMerge = <T>(target: T, ...sources: T[]): T => {
 // https://github.com/oxc-project/oxc/issues/20087
 
 /**
- * Makes my personal configuration and rules for oxlint. Note that you should
- * enable `typeAware` and `typeCheck` in your root config for improved ts
- * checks.
+ * Makes my personal configuration and rules for oxlint. Note that you should enable `typeAware` and
+ * `typeCheck` in your root config for improved ts checks.
+ *
  * @param param0 Parameters to tweak configuration.
- * @returns oxlint configuration.
+ * @returns Oxlint configuration.
  */
 const melchor629Oxlint = ({
   additional = {},
