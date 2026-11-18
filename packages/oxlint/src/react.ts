@@ -74,6 +74,7 @@ const generateReactRules = (): OxlintConfig => ({
         handlers: ['onClick', 'onMouseDown', 'onMouseUp', 'onKeyPress', 'onKeyDown', 'onKeyUp'],
       },
     ],
+    'jsx-a11y/prefer-tag-over-role': 'allow',
 
     // not implemented: react compiler rules (react-hooks)
     // "react/prefer-read-only-props": "error",

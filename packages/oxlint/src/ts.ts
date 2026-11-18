@@ -1,9 +1,6 @@
 import type { OxlintConfig } from 'oxlint'
 
 const generateTypescriptRules = (): OxlintConfig => ({
-  options: {
-    typeAware: true,
-  },
   overrides: [
     {
       plugins: ['typescript'],

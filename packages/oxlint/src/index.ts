@@ -10,7 +10,7 @@ type Melchor629OxlintOptions = Readonly<{
    * Provide additional config and overrides. Workaround because some of the properties are not
    * merged when using `extends`.
    */
-  additional?: OxlintConfig[]
+  additional?: OxlintConfig
   /**
    * The environment settings for the linter. It is used to determine which rules should be applied
    * based on the target environment (e.g., Node.js, browser, etc.).
@@ -52,8 +52,16 @@ const deepMerge = <T>(target: T, ...sources: T[]): T => {
 
 // there are certain issues with the extends property
 // https://github.com/oxc-project/oxc/issues/20087
+
+/**
+ * Makes my personal configuration and rules for oxlint. Note that you should
+ * enable `typeAware` and `typeCheck` in your root config for improved ts
+ * checks.
+ * @param param0 Parameters to tweak configuration.
+ * @returns oxlint configuration.
+ */
 const melchor629Oxlint = ({
-  additional = [],
+  additional = {},
   env = { builtin: true },
   jsx = false,
   ts = true,
@@ -66,7 +74,7 @@ const melchor629Oxlint = ({
       ts ? generateTypescriptRules() : {},
       jsx ? generateReactRules() : {},
       regexpRules,
-      ...additional,
+      additional,
       defineConfig({ env }),
     ),
   )
